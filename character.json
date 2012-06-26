@@ -1,0 +1,98 @@
+[
+    {
+         "name": "忍者",
+         "hp": 1000,
+         "attack": 100,
+         "defence": 100,
+         "image": "img/ninja.jpg",
+         "specialMoves": [
+             {
+                 "name": "くない",
+                 "attack": 200
+             },
+             {
+                 "name": "手裏剣",
+                 "attack": 150
+             },
+             {
+                 "name": "水遁の術",
+                 "attack": 0
+             },
+             {
+                 "name": "火遁の術",
+                 "attack": 250
+             },
+             {
+                 "name": "忍刀",
+                 "attack": 500
+             }
+         ]
+     },
+    {
+         "name": "伊東一刀斎",
+         "hp": 1300,
+         "attack": 120,
+         "defence": 70,
+         "image": "img/ito.jpg",
+         "specialMoves": [
+             {
+                 "name": "払捨刀",
+                 "attack": 300
+             },
+             {
+                 "name": "刃引",
+                 "attack": 200
+             },
+             {
+                 "name": "相小太刀",
+                 "attack": 150
+             },
+             {
+                 "name": "夢想剣",
+                 "attack": 220
+             },
+             {
+                 "name": "越身",
+                 "attack": 180
+             }
+         ]
+     },
+    {
+         "name": "空手家",
+         "hp": 2000,
+         "attack": 200,
+         "defence": 150,
+         "image": "img/karateka.jpg",
+         "specialMoves": [
+             {
+                 "name": "回し蹴り",
+                 "attack": 400
+             },
+             {
+                 "name": "前蹴り",
+                 "attack": 100
+             },
+             {
+                 "name": "手刀",
+                 "attack": 250
+             },
+             {
+                 "name": "正拳突き",
+                 "attack": 600
+             }
+        ]
+    },
+    {
+         "name": "塚原卜伝",
+         "hp": 3000,
+         "attack": 450,
+         "defence": 300,
+         "image": "img/bokuden.jpg",
+         "specialMoves": [
+             {
+                 "name": "一の太刀",
+                 "attack": 500
+             }
+         ]
+    }
+]

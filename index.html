@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Combat</title>
+    <link rel="stylesheet" href="css/battle.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="knockout/build/output/knockout-latest.debug.js" ></script>
+    <script type="text/javascript" src="js/custom_bindings.js" ></script>
+    <script type="text/javascript" src="js/battle.js" ></script>
+  </head>
+  <body>
+    <h1>
+    Combat
+    </h1>
+
+    <div id="battle_field" data-bind="fadeVisible: isGame()">
+      TODO: draw battle field
+      <div style="height: 200px; display: none; background-color: red" ></div>
+    </div>
+
+    <div style="height: 300px;">
+      <div class="character" data-bind="if: player().name" style="float: left">
+        <div>
+          <img data-bind="attr: { src: player().image }" style="width: 150px"/>
+        </div>
+        <div data-bind="text: player().name"></div>
+        <div data-bind="text: player().hp"></div>
+      </div>
+      <div data-bind="if: isGame(), visible: !$root.isInAttackAnimation()" class="character" style="float: left">
+        <ul class="moves" data-bind="foreach: player().specialMoves">
+          <li data-bind="text: name, click: $root.attackEachOther"></li>
+        </ul>
+      </div>
+      <div class="character" data-bind="if: cpu().name" style="float: right">
+        <div>
+          <img data-bind="attr: { src: cpu().image }" style="width: 150px"/>
+        </div>
+        <div data-bind="text: cpu().name"></div>
+        <div data-bind="text: cpu().hp"></div>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+
+    <h2 data-bind="fadeVisible: isSelect()">
+      Choose a character
+    </h2>
+    <div data-bind="foreach: characters, fadeVisible: isSelect()">
+      <div class="character" data-bind="event: { mouseover: $root.displayCharacter, mouseout: $root.hideCharacter }, click: $root.chooseCharacter" style="float: left">
+        <div>
+          <img data-bind="attr: { src: image }" style="width: 100px"/>
+        </div>
+        <div data-bind="text: name"></div>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+
+    <h2 data-bind="fadeVisible: isResult() && player().hp() > 0">
+      you win!!
+    </h2>
+    <h2 data-bind="fadeVisible: isResult() && cpu().hp() > 0">
+      you lose!!
+    </h2>
+    <h2 data-bind="fadeVisible: isResult() && cpu().hp() == 0 && player().hp() == 0">
+      draw
+    </h2>
+  </body>
+</html>

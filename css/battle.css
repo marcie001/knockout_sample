@@ -1,0 +1,10 @@
+.character {
+    padding: 5px 15px;
+}
+#battle_field {
+    height: 250px;
+    background-color: blue;
+}
+li:hover {
+    background-color: #3C3B37;
+}
