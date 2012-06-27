@@ -66,7 +66,7 @@ $(function () {
         self.isInAttackAnimation = ko.observable(false);
 
         // get character data
-        $.getJSON('/knockout/character.json', function (allData) {
+        $.getJSON('./character.json', function (allData) {
             var data = $.map(allData, function (item) {
                 return new Character(item);
             });
